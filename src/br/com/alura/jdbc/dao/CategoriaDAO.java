@@ -21,9 +21,9 @@ public class CategoriaDAO {
 	public List<Categoria> listar() {
 		try {
 			List<Categoria> categorias = new ArrayList<>();
-			String sql = "SELECT ID, NOME FROM CATEGORIA";
+			
 
-			try (PreparedStatement pstm = connection.prepareStatement(sql)) {
+			try (PreparedStatement pstm = connection.prepareStatement("SELECT ID, NOME FROM CATEGORIA")) {
 				pstm.execute();
 
 				try (ResultSet rst = pstm.getResultSet()) {

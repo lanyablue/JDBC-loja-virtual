@@ -1,4 +1,5 @@
 package br.com.alura.jdbc.testes;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -10,10 +11,10 @@ public class TestaConexao {
 
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.recuperarConexao();
-		
+
 		System.out.println("Fechando conexão!");
 		connection.close();
-		
+
 	}
 
 }

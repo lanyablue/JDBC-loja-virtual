@@ -1,4 +1,4 @@
-package br.com.alura.jdbc.modelo;
+package br.com.alura.jdbc.modelo;  // entity, domain, modelo
 
 public class Produto {
 
