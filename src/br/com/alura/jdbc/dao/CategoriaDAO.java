@@ -45,10 +45,9 @@ public class CategoriaDAO {
 		Categoria ultima = null;
 		List<Categoria> categorias = new ArrayList<>();
 
-		String sql = "SELECT C.ID, C.NOME, P.ID, P.NOME, P.DESCRICAO " + "FROM CATEGORIA C "
-				+ "INNER JOIN PRODUTO P ON C.ID = P.CATEGORIA_ID";
 
-		try (PreparedStatement pstm = connection.prepareStatement(sql)) {
+		try (PreparedStatement pstm = connection.prepareStatement("SELECT C.ID, C.NOME, P.ID, P.NOME, P.DESCRICAO " + "FROM CATEGORIA C "
+				+ "INNER JOIN PRODUTO P ON C.ID = P.CATEGORIA_ID")) {
 			pstm.execute();
 
 			try (ResultSet rst = pstm.getResultSet()) {
